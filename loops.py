@@ -84,3 +84,44 @@
 
 # password = "secrett"
 # print(len(password))
+
+
+# number = 10
+
+# while number >= 1:
+#   print(number) 
+#   number = number - 1
+# print("Finished!")
+
+
+print("Password Creator")
+print("===============")
+
+while True:
+    password = input("Create a password: ")
+    
+    # Check length
+    if len(password) < 8:
+        print("Password must be at least 8 characters!")
+        continue
+    
+    # Check for number (you'll need to figure this out!)
+    # Hint: Loop through each character and check if it's a digit
+
+    has_number = False
+
+    # pass123
+
+    for char in password:
+        if char in "0123456789":
+            has_number = True
+            break
+    
+    if not has_number:
+        print("You password should at least contain 1 character")
+        continue
+    
+    # If we get here, password is valid
+    print("Password accepted!")
+    break
+
